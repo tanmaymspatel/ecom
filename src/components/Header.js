@@ -1,30 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
 import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <MainHeader>
+    <header className="h-40 flex justify-between items-center bg-slate-100 px-20 relative py-11">
       <NavLink to="/">
-        <img src="./images/logo.png" alt="my logo img" />
+        <h2 className="uppercase flex gap-2 items-center">
+          <p className="text-5xl font-bold text-white bg-indigo-600 p-2">
+            ecom
+          </p>
+          <p className="text-5xl font-bold">store</p>
+        </h2>
       </NavLink>
-      <Nav />
-    </MainHeader>
+      <div className="flex-grow text-right">
+        <Nav />
+      </div>
+    </header>
   );
 };
 
-const MainHeader = styled.header`
-  padding: 0 4.8rem;
-  height: 10rem;
-  background-color: ${({ theme }) => theme.colors.bg};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-
-  .logo {
-    height: 5rem;
-  }
-`;
 export default Header;

@@ -6,7 +6,7 @@ const HeroSection = ({ myData }) => {
   const { name } = myData;
 
   return (
-    <Wrapper>
+    <section className="py-40">
       <div className="container">
         <div className="grid grid-two-column">
           <div className="hero-section-data">
@@ -26,14 +26,14 @@ const HeroSection = ({ myData }) => {
             <figure>
               <img
                 src="images/hero.jpg"
-                alt="hero-section-photo"
+                alt="hero-section"
                 className="img-style"
               />
             </figure>
           </div>
         </div>
       </div>
-    </Wrapper>
+    </section>
   );
 };
 
