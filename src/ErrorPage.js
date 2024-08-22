@@ -16,7 +16,7 @@ const ErrorPage = () => {
           </p>
 
           <NavLink to="/">
-            <Button>Go Back to Home</Button>
+            <Button btnName="Go Back to Home"></Button>
           </NavLink>
         </div>
       </div>

@@ -34,8 +34,8 @@ const Contact = () => {
   `;
 
   return (
-    <Wrapper>
-      <h2 className="common-heading">Contact page</h2>
+    <>
+      <h2 className="heading text-center mt-24">Contact page</h2>
 
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.265588856342!2d73.91455641541671!3d18.562061287384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sPhoenix%20Marketcity%20-%20Viman%20Nagar!5e0!3m2!1sen!2sin!4v1664345115285!5m2!1sen!2sin"
@@ -44,20 +44,24 @@ const Contact = () => {
         style={{ border: 0 }}
         allowFullScreen=""
         loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"></iframe>
+        referrerPolicy="no-referrer-when-downgrade"
+        title="contact us"
+      ></iframe>
 
-      <div className="container">
-        <div className="contact-form">
+      <div className="container pt-32">
+        <div className="max-w-[50rem] mx-auto">
           <form
             action="https://formspree.io/f/xeqdgwnq"
             method="POST"
-            className="contact-inputs">
+            className="flex flex-col gap-12"
+          >
             <input
               type="text"
               placeholder="username"
               name="username"
               required
               autoComplete="off"
+              className="text-2xl"
             />
 
             <input
@@ -65,6 +69,7 @@ const Contact = () => {
               name="Email"
               placeholder="Email"
               autoComplete="off"
+              className="text-2xl"
               required
             />
 
@@ -74,13 +79,15 @@ const Contact = () => {
               rows="10"
               required
               autoComplete="off"
-              placeholder="Enter you message"></textarea>
+              placeholder="Enter you message"
+              className="text-2xl"
+            ></textarea>
 
             <input type="submit" value="send" />
           </form>
         </div>
       </div>
-    </Wrapper>
+    </>
   );
 };
 

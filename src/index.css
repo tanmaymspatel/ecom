@@ -21,4 +21,31 @@ code {
   .navbar-link {
     @apply uppercase text-4xl transition-all hover:text-indigo-600 font-normal pb-3 border-b-4 border-transparent  hover:border-indigo-600;
   }
+
+  .section {
+    @apply py-48;
+  }
+
+  .heading {
+    @apply text-6xl font-semibold capitalize mb-24;
+  }
+
+  .image-category {
+    @apply absolute text-2xl top-[15%] right-[10%] uppercase bg-white text-indigo-600 px-6 py-4 rounded-full;
+  }
+
+  .figure-after {
+    @apply after:content-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-[0%] after:bg-black after:bg-opacity-50 after:transition-all after:duration-300 after:cursor-pointer after:hover:w-[100%];
+  }
+
+  .services {
+    @apply h-[30rem] bg-slate-100 flex flex-col justify-center w-auto items-center content-center shadow-sm rounded-3xl;
+  }
+  .icon {
+    @apply text-8xl bg-white p-3 text-indigo-600 rounded-full my-3;
+  }
+
+  .footer-icon {
+    @apply text-white text-7xl p-3 border-2 border-white rounded-full;
+  }
 }

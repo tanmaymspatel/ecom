@@ -2,32 +2,30 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
 
-const HeroSection = ({ myData }) => {
-  const { name } = myData;
-
+const HeroSection = ({ name }) => {
   return (
-    <section className="py-40">
-      <div className="container">
-        <div className="grid grid-two-column">
-          <div className="hero-section-data">
-            <p className="intro-data">Welcome to </p>
-            <h1> {name} </h1>
-            <p>
+    <section className="section">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <p className="text-4xl text-indigo-600 uppercase">Welcome to </p>
+            <h1 className="font-bold"> {name} </h1>
+            <p className="py-6 text-3xl leading-10 text-slate-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
               atque temporibus veniam doloribus libero ad error omnis voluptates
               animi! Suscipit sapiente.
             </p>
-            <NavLink>
-              <Button>show now</Button>
+            <NavLink to={"/products"}>
+              <Button btnName={"show now"} />
             </NavLink>
           </div>
           {/* our homepage image  */}
-          <div className="hero-section-image">
-            <figure>
+          <div className="hero-section-image flex items-center justify-center w-full h-auto">
+            <figure className="relative after:content-[''] after:absolute after:block after:w-[60%] after:h-[80%] after:bg-indigo-500 after:-top-20 after:-right-20 after:-z-10">
               <img
                 src="images/hero.jpg"
                 alt="hero-section"
-                className="img-style"
+                className="img-style w-full h-auto"
               />
             </figure>
           </div>

@@ -4,13 +4,9 @@ import Services from "./components/Services";
 import Trusted from "./components/Trusted";
 
 const Home = () => {
-  const data = {
-    name: "Ecom store",
-  };
-
   return (
     <>
-      <HeroSection myData={data} />
+      <HeroSection name={"Ecom store"} />
       <FeatureProduct />
       <Services />
       <Trusted />

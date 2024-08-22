@@ -2,44 +2,51 @@ import styled from "styled-components";
 
 const Trusted = () => {
   return (
-    <Wrapper className="brand-section">
+    <section className="section bg-slate-100 brand-section">
       <div className="container">
-        <h3>Trusted By 1000+ Companies</h3>
-        <div className="brand-section-slider">
+        <h3 className="text-center capitalize text-5xl font-semibold mb-20 text-gray-600">
+          Trusted By 1000+ Companies
+        </h3>
+        <div className="brand-section-slider flex items-center justify-between ">
           {/* my 1st img  */}
           <div className="slide">
             <img
               src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"
               alt="trusted-brands"
+              className="w-auto h-40"
             />
           </div>
           <div className="slide">
             <img
               src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"
               alt="trusted-brands"
+              className="w-auto h-40"
             />
           </div>
           <div className="slide">
             <img
               src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"
               alt="trusted-brands"
+              className="w-auto h-40"
             />
           </div>
           <div className="slide">
             <img
               src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png"
               alt="trusted-brands"
+              className="w-auto h-40"
             />
           </div>
           <div className="slide">
             <img
               src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"
               alt="trusted-brands"
+              className="w-auto h-40"
             />
           </div>
         </div>
       </div>
-    </Wrapper>
+    </section>
   );
 };
 

@@ -6,40 +6,40 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 
 const Services = () => {
   return (
-    <Wrapper>
+    <section className="section">
       <div className="container">
-        <div className="grid grid-three-column">
-          <div className="services-1">
-            <div>
+        <div className="grid grid-cols-3">
+          <div className="services">
+            <div className="flex flex-col justify-center items-center gap-4">
               <TbTruckDelivery className="icon" />
-              <h3>Super Fast and Free Delivery</h3>
+              <h3 className="text-4xl">Super Fast and Free Delivery</h3>
             </div>
           </div>
 
-          <div className="services-2">
-            <div className="services-colum-2">
-              <div>
-                <MdSecurity className="icon" />
-                <h3>Non-contact Shipping</h3>
+          <div className="services shadow-none bg-transparent justify-between gap-[6rem]">
+            <div className="services-colum-2 rounded-3xl bg-slate-100 flex items-center justify-center w-full h-full ">
+              <div className="flex items-center justify-center gap-4">
+                <MdSecurity className="icon " />
+                <h3 className="text-4xl">Non-contact Shipping</h3>
               </div>
             </div>
-            <div className="services-colum-2">
-              <div>
-                <GiReceiveMoney className="icon" />
-                <h3>Money-back Guaranteed</h3>
+            <div className="services-colum-2 rounded-3xl bg-slate-100 flex items-center justify-center w-full h-full">
+              <div className="flex items-center justify-center gap-4">
+                <GiReceiveMoney className="icon " />
+                <h3 className="text-4xl">Money-back Guaranteed</h3>
               </div>
             </div>
           </div>
 
-          <div className="services-3">
-            <div>
-              <RiSecurePaymentLine className="icon" />
-              <h3>Super Secure Payment System</h3>
+          <div className="services">
+            <div className="flex flex-col justify-center items-center gap-4">
+              <RiSecurePaymentLine className="icon " />
+              <h3 className="text-4xl">Super Secure Payment System</h3>
             </div>
           </div>
         </div>
       </div>
-    </Wrapper>
+    </section>
   );
 };
 

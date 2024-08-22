@@ -11,36 +11,38 @@ const Cart = () => {
 
   if (cart?.length === 0) {
     return (
-      <EmptyDiv>
-        <h3>No Cart in Item </h3>
-      </EmptyDiv>
+      <div className="flex items-center justify-center">
+        <h3 className="text-5xl capitalize">No Cart in Item </h3>
+      </div>
     );
   }
 
   return (
-    <Wrapper>
+    <section className="section">
       <div className="container">
-        <div className="cart_heading grid grid-five-column">
-          <p>Item</p>
-          <p className="cart-hide">Price</p>
-          <p>Quantity</p>
-          <p className="cart-hide">Subtotal</p>
-          <p>Remove</p>
+        <div className="cart_heading text-center grid grid-cols-5">
+          <p className="text-4xl ">Item</p>
+          <p className="cart-hide hidden md:block text-4xl ">Price</p>
+          <p className="text-4xl ">Quantity</p>
+          <p className="cart-hide hidden md:block text-4xl ">Subtotal</p>
+          <p className="text-4xl ">Remove</p>
         </div>
-        <hr />
-        <div className="cart-item">
+        <div className="border-2 my-10" />
+        <div className="cart-item ">
           {cart?.map((curElem) => {
             return <CartItem key={curElem.id} {...curElem} />;
           })}
         </div>
         <hr />
-        <div className="cart-two-button">
+        <div className="cart-two-button flex justify-between gap-8 mt-8">
           <NavLink to="/products">
-            <Button> continue Shopping </Button>
+            <Button btnName="continue shopping"></Button>
           </NavLink>
-          <Button className="btn btn-clear" onClick={clearCart}>
-            clear cart
-          </Button>
+          <Button
+            btnName="clear cart"
+            className="btn btn-clear"
+            onClick={clearCart}
+          ></Button>
         </div>
 
         {/* order total_amount */}
@@ -68,7 +70,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
-    </Wrapper>
+    </section>
   );
 };
 
