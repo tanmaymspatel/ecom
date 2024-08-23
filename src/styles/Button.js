@@ -1,8 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-export function Button({ btnName }) {
+export function Button({ btnName, clr }) {
   return (
-    <button className="text-white text-3xl bg-indigo-600 hover:bg-indigo-500 hover:shadow-lg hover:scale-95  active:scale-95 py-10 px-12 uppercase text-center cursor-pointer transition-all">
+    <button
+      className={`${
+        clr ? clr : "bg-indigo-600"
+      } text-white text-3xl bg-indigo-600 hover:bg-opacity-80 hover:shadow-lg hover:scale-95  active:scale-95 py-8 px-10 uppercase text-center cursor-pointer transition-all`}
+    >
       {btnName}
     </button>
   );

@@ -11,7 +11,7 @@ const Product = (curElem) => {
           <img
             src={image}
             alt={name}
-            className="max-w-[90%] mt-6 transition-all duration-300 group-hover:scale-125"
+            className="max-w-[90%] mt-6 transition-all duration-300 group-hover:scale-125 object-cover"
           />
           <figcaption className="image-category">{category}</figcaption>
         </figure>

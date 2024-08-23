@@ -6,8 +6,8 @@ import { useFilterContext } from "./context/filter_context";
 
 const Products = () => {
   return (
-    <Wrapper>
-      <div className="container grid grid-filter-column">
+    <section className="section">
+      <div className="container grid  grid-cols-[1fr_1fr] md:grid-cols-[0.2fr_1fr]">
         <div>
           <FilterSection />
         </div>
@@ -21,7 +21,7 @@ const Products = () => {
           </div>
         </section>
       </div>
-    </Wrapper>
+    </section>
   );
 };
 

@@ -20,7 +20,7 @@ const Cart = () => {
   return (
     <section className="section">
       <div className="container">
-        <div className="cart_heading text-center grid grid-cols-5">
+        <div className="cart_heading text-center grid grid-cols-[20%_1fr_1fr_1fr_1fr]">
           <p className="text-4xl ">Item</p>
           <p className="cart-hide hidden md:block text-4xl ">Price</p>
           <p className="text-4xl ">Quantity</p>
@@ -33,37 +33,37 @@ const Cart = () => {
             return <CartItem key={curElem.id} {...curElem} />;
           })}
         </div>
-        <hr />
+        <div className="border-2 my-16" />
         <div className="cart-two-button flex justify-between gap-8 mt-8">
           <NavLink to="/products">
             <Button btnName="continue shopping"></Button>
           </NavLink>
           <Button
             btnName="clear cart"
-            className="btn btn-clear"
             onClick={clearCart}
+            clr="bg-red-600"
           ></Button>
         </div>
 
         {/* order total_amount */}
-        <div className="order-total--amount">
-          <div className="order-total--subdata">
-            <div>
-              <p>subtotal:</p>
-              <p>
+        <div className="order-total--amount py-14 flex justify-end">
+          <div className="order-total--subdata w-[35rem] bg-gray-100 p-16 flex flex-col items-start gap-12">
+            <div className="flex items-center justify-between w-full">
+              <p className="text-4xl">subtotal:</p>
+              <p className="text-4xl font-bold">
                 <FormatPrice price={total_price} />
               </p>
             </div>
-            <div>
-              <p>shipping fee:</p>
-              <p>
+            <div className="flex items-center justify-between w-full">
+              <p className="text-4xl">shipping fee:</p>
+              <p className="text-4xl font-bold">
                 <FormatPrice price={shipping_fee} />
               </p>
             </div>
-            <hr />
-            <div>
-              <p>order total:</p>
-              <p>
+            <div className="border-2 my-2 w-full" />
+            <div className="flex items-center justify-between w-full">
+              <p className="text-4xl">order total:</p>
+              <p className="text-4xl font-bold">
                 <FormatPrice price={shipping_fee + total_price} />
               </p>
             </div>
@@ -177,12 +177,6 @@ const Wrapper = styled.section`
     align-items: center;
     gap: 2.4rem;
     font-size: 1.4rem;
-
-    button {
-      border: none;
-      background-color: #fff;
-      cursor: pointer;
-    }
 
     .amount-style {
       font-size: 2.4rem;

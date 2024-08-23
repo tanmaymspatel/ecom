@@ -36,7 +36,7 @@ const FilterSection = () => {
   // );
 
   return (
-    <Wrapper>
+    <section className="flex flex-col gap-12">
       <div className="filter-search">
         <form onSubmit={(e) => e.preventDefault()}>
           <input
@@ -45,13 +45,14 @@ const FilterSection = () => {
             placeholder="Search"
             value={text}
             onChange={updateFilterValue}
+            className="px-2 py-4 text-2xl w-[80%]"
           />
         </form>
       </div>
 
       <div className="filter-category">
         <h3>Category</h3>
-        <div>
+        <div className="flex flex-col items-start gap-4">
           {categoryData.map((curElem, index) => {
             return (
               <button
@@ -148,7 +149,7 @@ const FilterSection = () => {
           btnName=" Clear Filters"
         ></Button>
       </div>
-    </Wrapper>
+    </section>
   );
 };
 
